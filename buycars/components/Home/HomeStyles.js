@@ -12,13 +12,14 @@ const HomeStyles = StyleSheet.create({
     width: 250,
     height: 350,
     flexDirection: 'row',
-
+      
     padding: 6,
-    margin: 6,
+    margin: 8,
     fontSize: 16,
-    alignItems: 'center',
+    // alignItems: 'center',
     textAlign: 'center',
-
+    justifyContent: 'center',
+    borderRadius: 8,
     backgroundColor: '#FFF',
     shadowOpacity: 0.8,
     shadowRadius: 5,
@@ -26,6 +27,15 @@ const HomeStyles = StyleSheet.create({
       height: 1,
       width: 1
       }
+  },
+  contentCard:{
+    marginTop: 16
+  },
+  img:{
+    height: 180,
+    width: 220,
+
+    marginBottom: 16,
   }
 
 });

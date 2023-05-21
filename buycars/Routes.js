@@ -39,6 +39,8 @@ export default function Routes() {
         name="Search"
         component={Search}
         options={{
+          headerStyle: {backgroundColor: '#000'},
+          headerTintColor: '#fff',
           tabBarIcon: ({ size, color }) => (
             <Feather name="search" size={size} color={color} />
           ),
@@ -49,6 +51,8 @@ export default function Routes() {
         name="New"
         component={New}
         options={{
+          headerStyle: {backgroundColor: '#000'},
+          headerTintColor: '#fff',
           tabBarLabel: '',
           tabBarIcon: ({ focused, size }) => (
             <ButtonNew size={size} focused={focused} />
@@ -60,6 +64,8 @@ export default function Routes() {
         name="Notification"
         component={Notification}
         options={{
+          headerStyle: {backgroundColor: '#000'},
+          headerTintColor: '#fff',
           tabBarIcon: ({ size, color }) => (
             <Entypo name="notification" size={size} color={color} />
           ),
@@ -70,6 +76,8 @@ export default function Routes() {
         name="Profile"
         component={Profile}
         options={{
+          headerStyle: {backgroundColor: '#000'},
+          headerTintColor: '#fff',
           tabBarIcon: ({ size, color }) => (
             <Feather name="user" size={size} color={color} />
           ),
