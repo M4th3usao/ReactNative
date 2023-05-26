@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "buycars",
-    "slug": "snack-5b65a35a-2f3b-4fa7-9468-f62eccc133b4",
+    "name": "consultacep",
+    "slug": "consultacep",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,9 +10,6 @@
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
@@ -23,12 +20,11 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "description": "studies about tab navigator and routes!"
+    }
   }
 }

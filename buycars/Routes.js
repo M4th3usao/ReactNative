@@ -12,15 +12,21 @@ const Tab = createBottomTabNavigator();
 export default function Routes() {
   return (
     <Tab.Navigator
-      tabBarOptions={{
+      screenOptions={{
         // activeTintColor: '#34BBF5',
-        activeTintColor: '#345AF5',
-        tabStyle: {
+        tabBarActiveTintColor: '#345AF5',
+        tabBarItemStyle: {
           border: 'transparent',
           backgroundColor: '#000',
           paddingBottom: 5,
           paddingTop: 5,
         },
+        tabBarStyle:[
+          {
+            display: "flex"
+          },
+          null
+        ]
       }}>
       <Tab.Screen
         name="Home"
@@ -82,6 +88,7 @@ export default function Routes() {
             <Feather name="user" size={size} color={color} />
           ),
         }}
+        // <Stack.Screen name="Profile"
       />
     </Tab.Navigator>
   );

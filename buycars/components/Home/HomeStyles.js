@@ -9,7 +9,7 @@ const HomeStyles = StyleSheet.create({
     // backgroundColor: '#CCE5FF'
   },
   card:{
-    width: 250,
+    width: 270,
     height: 350,
     flexDirection: 'row',
       
@@ -33,7 +33,7 @@ const HomeStyles = StyleSheet.create({
   },
   img:{
     height: 180,
-    width: 220,
+    width: 240,
 
     marginBottom: 16,
   }
