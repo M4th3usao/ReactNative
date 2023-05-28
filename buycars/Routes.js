@@ -6,7 +6,6 @@ import Search from './components/Search/SearchScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Entypo, Feather } from '@expo/vector-icons';
 
-import ButtonNew from './components/buttonNew';
 const Tab = createBottomTabNavigator();
 
 export default function Routes() {
@@ -34,7 +33,7 @@ export default function Routes() {
         options={{
           headerStyle: {backgroundColor: '#000'},
           tabBarIcon: ({ size, color }) => (
-            <Entypo name="home" size={size} color={color} />
+            <Entypo name="home" size={20} color={color} />
           ),
           headerTintColor: '#fff'
         }}
@@ -48,35 +47,22 @@ export default function Routes() {
           headerStyle: {backgroundColor: '#000'},
           headerTintColor: '#fff',
           tabBarIcon: ({ size, color }) => (
-            <Feather name="search" size={size} color={color} />
+            <Feather name="search" size={20} color={color} />
           ),
         }}
       />
 
-      <Tab.Screen
-        name="New"
-        component={New}
-        options={{
-          headerStyle: {backgroundColor: '#000'},
-          headerTintColor: '#fff',
-          tabBarLabel: '',
-          tabBarIcon: ({ focused, size }) => (
-            <ButtonNew size={size} focused={focused} />
-          ),
-        }}
-      />
-
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Notification"
         component={Notification}
         options={{
           headerStyle: {backgroundColor: '#000'},
           headerTintColor: '#fff',
           tabBarIcon: ({ size, color }) => (
-            <Entypo name="notification" size={size} color={color} />
+            <Entypo name="notification" size={20} color={color} />
           ),
         }}
-      />
+      /> */}
 
       <Tab.Screen
         name="Profile"
@@ -85,7 +71,7 @@ export default function Routes() {
           headerStyle: {backgroundColor: '#000'},
           headerTintColor: '#fff',
           tabBarIcon: ({ size, color }) => (
-            <Feather name="user" size={size} color={color} />
+            <Feather name="user" size={20} color={color} />
           ),
         }}
         // <Stack.Screen name="Profile"

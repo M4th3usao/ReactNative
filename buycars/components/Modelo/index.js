@@ -3,10 +3,10 @@ import {View, Text} from 'react-native'
 
 import {styles} from './styles'
 
-export default function Modelo(){
+export default function Modelo(props){
     return(
         <View> 
-            <Text>{this.props.data.nome}</Text>
+            <Text>{props.data.codigo} - {props.data.nome}</Text>
         </View>
 
     );
