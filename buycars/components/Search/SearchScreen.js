@@ -1,5 +1,5 @@
 import React, {Component, useState, useEffect} from 'react';
-import {View, Text, TextInput, Button} from 'react-native';
+import {View, Text, TextInput, Button, Pressable} from 'react-native';
 import api from '../../Services/Api'
 
 import Modelo from '../Modelo';
@@ -26,29 +26,39 @@ export default function Search(){
     // consultaCarroAno
   return(
     <View style={styles.container}> 
-      <Text>Selecione a Marca do seu veículo:</Text>
-      <Picker
-        style={styles.picker}
-        selectedValue={marca}
-        onValueChange={(itemValue) => setMarca(itemValue)
-      }>
-        <Picker.item key={0} value={0} label='---------Marca---------'/>
-        <Picker.item key={1} value={1} label="Acura"/>
-        <Picker.item key={2} value={2} label="Agrale"/>
-        <Picker.item key={3} value={3} label="Alfa Romeo"/>
-        <Picker.item key={4} value={4} label="AM Gen"/>
-        <Picker.item key={5} value={5} label="Asia Motors"/>
-        <Picker.item key={6} value={6} label="Audi"/>
-        <Picker.item key={7} value={189} label="Aston Martin"/>
-        <Picker.item key={8} value={7} label="BMW"/>
-        <Picker.item key={9} value={10} label="Cadillac"/>
-        <Picker.item key={''} value={20} label="Ferrari"/>
-      </Picker>
+      <View style={styles.content}>
+        
+        <Text style={styles.title}>Selecione a Marca do seu veículo:</Text>
+        
+        <View style={styles.pickerContent}>
+          <Picker
+            style={styles.picker}
+            selectedValue={marca}
+            onValueChange={(itemValue) => setMarca(itemValue)
+          }>
+            <Picker.item key={0} value={0} label='---------Marcas---------'/>
+            <Picker.item key={1} value={1} label="Acura"/>
+            <Picker.item key={2} value={2} label="Agrale"/>
+            <Picker.item key={3} value={3} label="Alfa Romeo"/>
+            <Picker.item key={4} value={4} label="AM Gen"/>
+            <Picker.item key={5} value={5} label="Asia Motors"/>
+            <Picker.item key={6} value={6} label="Audi"/>
+            <Picker.item key={7} value={189} label="Aston Martin"/>
+            <Picker.item key={8} value={7} label="BMW"/>
+            <Picker.item key={9} value={10} label="Cadillac"/>
+            <Picker.item key={''} value={20} label="Ferrari"/>
+          </Picker>
+        </View>
+        <Pressable
+          style={styles.pressable} 
+          onPress={() => consultaMarca(marca)} 
+        >
+          <Text style={styles.textPressable}>Consultar Modelo</Text>
+        </Pressable>
 
-      <Button title="Consultar Modelos" onPress={() => consultaMarca(marca)} />
+      </View>
 
-
-      <View  style={{height:300}}>
+      <View style={styles.list}>
           <FlatList
             data={modelos}
             keyExtractor={item => item.codigo}

@@ -2,15 +2,15 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     padding: 16,
     alignItems: 'center',
-    justifyContent: 'center',
-
-    // backgroundColor: '#CCE5FF'
+    // justifyContent: 'center',
+    backgroundColor: '#1F1C1A'
   },
   card: {
-    width: 280,
-    height: 350,
+    width: 350,
+    height: 450,
     flexDirection: 'column',
 
     padding: 16,

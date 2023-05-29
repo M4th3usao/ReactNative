@@ -12,17 +12,18 @@ export default function Routes() {
   return (
     <Tab.Navigator
       screenOptions={{
-        // activeTintColor: '#34BBF5',
-        tabBarActiveTintColor: '#345AF5',
+        // tabBarActiveTintColor: '#345AF5',
+        tabBarActiveTintColor: '#E25A17',
         tabBarItemStyle: {
-          border: 'transparent',
+          borderTopColor: 'transparent',
           backgroundColor: '#000',
           paddingBottom: 5,
           paddingTop: 5,
         },
         tabBarStyle:[
           {
-            display: "flex"
+            display: "flex",
+            borderTopColor: 'transparent',
           },
           null
         ]
@@ -51,18 +52,6 @@ export default function Routes() {
           ),
         }}
       />
-
-      {/* <Tab.Screen
-        name="Notification"
-        component={Notification}
-        options={{
-          headerStyle: {backgroundColor: '#000'},
-          headerTintColor: '#fff',
-          tabBarIcon: ({ size, color }) => (
-            <Entypo name="notification" size={20} color={color} />
-          ),
-        }}
-      /> */}
 
       <Tab.Screen
         name="Profile"

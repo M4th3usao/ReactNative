@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {View, Text, Image, FlatList, Linking, ScrollView} from 'react-native';
+import {View, Text, Image, FlatList, Linking, Button} from 'react-native';
 import {HomeStyles} from './HomeStyles'
 import PhotoCars  from './PhotoCars';
 
@@ -10,7 +10,7 @@ export default function Home(){
     { key: "1", 
       titulo: 'Ferrari GTO', 
       ano: '2020',  
-      km: '20', 
+      motor: '5.2 V12 BI TURBO', 
       valor: 'R$ 2.200.000,00', 
       local: 'Araras-SP', 
       img: 'https://autobusiness.com.br/assets/img/albuns/album_7944/foto-Album-de-MERCEDES-BENZ-A7213-63a4c6cb561f3.webp'
@@ -91,24 +91,29 @@ export default function Home(){
   ]);
   const PostComponent = ({post}) => {
     return(
-       <SafeAreaView style={HomeStyles.card}>
+       <View style={HomeStyles.card}>
           <View style={HomeStyles.contentCard}>
             <Image 
               style={HomeStyles.img}
               source={{ uri: post.img }}
             />
-            <Text>{post.titulo} {post.ano}</Text>
-            <Text>{post.motor}</Text>
-            <Text>{post.local}</Text>
-            <Text>{post.valor}</Text>
-            <Text
-              onPress={() =>{
-                Linking.openURL(post.font)
-              }}>
-              Veja mais detalhes sobre o Veículo!
-            </Text>
+            <View style={HomeStyles.contentText}>
+              <Text>{post.titulo} {post.ano}</Text>
+              <Text>{post.motor}</Text>
+              <Text>{post.local}</Text>
+              <Text>{post.valor}</Text>
+              <View style={HomeStyles.btnDetalhes}>
+                <Text   
+                  style={HomeStyles.btnDetalhesText}
+                  onPress={() =>{
+                    Linking.openURL(post.font)
+                  }}>
+                  Detalhes do Veículo
+                </Text>
+              </View>
+            </View>
           </View>
-      </SafeAreaView>
+      </View>
     );
   };
 
@@ -119,7 +124,7 @@ export default function Home(){
             /* // keyExtractor={(item) => item.id} */
             keyExtractor={(elemento) => String(elemento.key)}
             renderItem={({item}) => <PostComponent post={item}/>}
-           
+            showsVerticalScrollIndicator={false}
           />
       </SafeAreaView>
   )

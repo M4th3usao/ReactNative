@@ -5,8 +5,11 @@ import {styles} from './styles'
 
 export default function Modelo(props){
     return(
-        <View> 
-            <Text>{props.data.codigo} - {props.data.nome}</Text>
+        <View style={styles.textContent}> 
+            <View style={styles.rowContent}>
+                    <Text>{props.data.codigo}</Text>
+                    <Text>{props.data.nome}</Text>
+            </View>
         </View>
 
     );
