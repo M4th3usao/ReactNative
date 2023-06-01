@@ -1,12 +1,13 @@
 import Home from './components/Home/HomeScreen';
-import New from './components/New/NewScreen';
-import Notification from './components/Notification/NotificationScreen';
 import Profile from './components/Profile/Profile';
 import Search from './components/Search/SearchScreen';
+import Register from './components/Register';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Entypo, Feather } from '@expo/vector-icons';
+import { createStackNavigator } from '@react-navigation/stack';
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 export default function Routes() {
   return (
@@ -63,8 +64,7 @@ export default function Routes() {
             <Feather name="user" size={20} color={color} />
           ),
         }}
-        // <Stack.Screen name="Profile"
       />
-    </Tab.Navigator>
+    </Tab.Navigator >
   );
 }

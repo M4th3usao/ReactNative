@@ -1,13 +1,31 @@
 import Routes from './Routes'
+import Register from './components/Register';
 import {NavigationContainer} from '@react-navigation/native'
-
+import { createStackNavigator } from '@react-navigation/stack';
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
 
 export default function App() {
+
+  const Stack = createStackNavigator();
+
   return(
     <NavigationContainer>
-      <Routes/>
+      <Stack.Navigator>
+        <Stack.Screen 
+          name='Routes' 
+          component={Routes}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name='Register' 
+          component={Register}
+          options={{
+            headerStyle: {backgroundColor: '#000'},
+            headerTintColor: '#fff'
+          }}
+        />
+      </Stack.Navigator>    
     </NavigationContainer>
   )
 }

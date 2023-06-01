@@ -7,7 +7,10 @@ container:{
 },
 textContent:{
     width: 350,
-    height: 20,
+    height: 30,
+    border: 2,
+    margin: 2,
+    borderColor: 'black',
     backgroundColor: '#fff'
 },
 rowContent:{

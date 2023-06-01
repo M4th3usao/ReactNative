@@ -1,16 +1,21 @@
 import React, {Component} from 'react';
 import {View, Text, Image, Pressable} from 'react-native';
-
+import { useNavigation } from '@react-navigation/native';
 import {TextInput} from '@react-native-material/core'
 
 import {styles} from './styles'
 
 
-export default function Profile(){
+export default function Profile({}){
 
-  // function goRegister(){
-  //   navigation.navigate('Register')
-  // }
+  const navigation = useNavigation();
+  function goRegister(){
+    navigation.navigate('Register')
+  }
+
+  // navigation.setOptions({
+  //   title: `Profile ${navigation.params?.nome}`
+  // })
   return(
     <View style={styles.container}> 
       <View style={styles.card}>
@@ -20,7 +25,12 @@ export default function Profile(){
         />
         <Text style={styles.nameUser}>Matheus Henrique</Text>
 
-        {/* <Pressable title="Cadastrar-se" onPress={Register}/>       */}
+        <Pressable 
+          style={styles.pressable}
+          onPress={() => goRegister('Register')}
+        >
+          <Text style={styles.textPressable}>Cadastre-se</Text>
+        </Pressable>      
       </View>
     </View>
   )

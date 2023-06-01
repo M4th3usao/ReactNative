@@ -66,16 +66,28 @@ export default function Search(){
           />
       </View> 
 
-      <TextInput 
-        style={styles.cep}
-        value={codigoCarro}
-        onChangeText={setCodigoCarro}
-        underlineColorAndroid="transparent"
-        keyboardType='numeric'
-        keyboardAppearance='dark'
-      />
+      <View style={styles.inputContent}>
 
-      <Button title="Consultar Carro" onPress={() => consultaCarro(codigoCarro)} />
+      <Text style={styles.title}>Insira o código do veículo:</Text>
+
+        <TextInput 
+          style={styles.input}
+          value={codigoCarro}
+          onChangeText={setCodigoCarro}
+          underlineColorAndroid="transparent"
+          keyboardType='numeric'
+          keyboardAppearance='dark'
+        />
+
+        <Pressable
+          style={styles.pressable}
+          onPress={() => consultaCarro(codigoCarro)}
+        >
+            <Text style={styles.textPressable}>Consultar Veículo</Text>
+        </Pressable>
+        
+      </View>
+
 
       <Text style={styles.endereco}>{carro?.Marca}</Text>
       <Text style={styles.endereco}>{carro?.Modelo}</Text>

@@ -1,19 +1,19 @@
 import React, {useState} from 'react';
 import {View, Text, Button} from 'react-native'
-import {useNavigation, StackActions} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 import {styles} from './styles'
 
 export default function Register({route}){
   const navigation = useNavigation();
   return(
-    <View>
+    <View style={styles.container}>
       <Text>Olá, teste.</Text>
 
       <Button
-        style={styles.btn}
-        title='Voltar para tela Home'
-        onPress={ () => navigation.goBack() }
+       
+        title='Verificar suas informações'
+        onPress={ () => navigation.goBack('Profile') }
       />
 
     </View>

@@ -39,6 +39,19 @@ const styles = StyleSheet.create({
   nameUser: {
     padding: 8,
   },
+  pressable:{
+    width: 180,
+    height: 50,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#2B2B2B',
+  },
+  textPressable:{
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#E25A17',
+  },  
 });
 
 export { styles };
