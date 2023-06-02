@@ -6,7 +6,7 @@ import {TextInput} from '@react-native-material/core'
 import {styles} from './styles'
 
 
-export default function Profile({}){
+export default function Profile({route}){
 
   const navigation = useNavigation();
   function goRegister(){
@@ -23,13 +23,15 @@ export default function Profile({}){
           style={styles.profile}
           source={{uri: 'https://autobusiness.com.br/assets/img/albuns/album_7059/album-Album-de-MCLAREN-765lt-A6344-62f52d31bfce8.jpg'}}
         />
-        <Text style={styles.nameUser}>Matheus Henrique</Text>
+        <Text style={styles.nameUser}>{route.params?.name}</Text>
+        <Text style={styles.nameUser}>{route.params?.email}</Text>
+        <Text style={styles.nameUser}>{route.params?.mobileNumber}</Text>
 
         <Pressable 
           style={styles.pressable}
           onPress={() => goRegister('Register')}
         >
-          <Text style={styles.textPressable}>Cadastre-se</Text>
+          <Text style={styles.textPressable}>Alterar Perfil</Text>
         </Pressable>      
       </View>
     </View>

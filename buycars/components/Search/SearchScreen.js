@@ -68,7 +68,7 @@ export default function Search(){
 
       <View style={styles.inputContent}>
 
-      <Text style={styles.title}>Insira o código do veículo:</Text>
+        <Text style={styles.title}>Insira o código do veículo:</Text>
 
         <TextInput 
           style={styles.input}
