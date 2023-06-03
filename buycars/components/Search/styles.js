@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },  
   list:{
     width: 350,
-    height: 220,
+    height: 200,
     margin: 20,
     borderRadius: 8,
     alignItems: 'center',
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   },
   inputContent:{
     width: 350,
-    height: 150,
+    height: 230,
   
     borderRadius: 8,
     alignItems: 'center',

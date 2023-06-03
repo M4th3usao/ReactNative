@@ -9,11 +9,12 @@ container:{
 },
 card: {
     width: 350,
-    height: 450,
+    height: 550,
     flexDirection: 'column',
 
     padding: 16,
     margin: 8,
+    marginTop: 40,
     fontSize: 16,
     alignItems: 'center',
 
@@ -25,6 +26,9 @@ card: {
       height: 1,
       width: 1,
     },
+  },
+  content:{
+    padding: 20,
   },
   input:{
     width: 280,
@@ -39,6 +43,7 @@ card: {
 pressable:{
     width: 180,
     height: 50,
+    marginTop: 30,
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
@@ -49,6 +54,11 @@ pressable:{
     fontWeight: 'bold',
     color: '#E25A17',
   }, 
+  resText:{
+    alignItems: 'center',
+    marginTop: 15, 
+    fontSize: 18
+  }
   
 });
 
